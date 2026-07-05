@@ -12,15 +12,12 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 首页">
-        <span class="brand-mark">CA</span>
-        <span>
-          <strong>{{ site.title }}</strong>
-          <small>{{ site.description }}</small>
-        </span>
+      <a class="site-title" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 首页">
+        {{ site.title }}
       </a>
+      <p class="site-description">{{ site.description }}</p>
       <nav class="site-nav" aria-label="主导航">
-        <a href="{{ '/#posts' | relative_url }}">文章</a>
+        <a href="{{ '/' | relative_url }}">首页</a>
         <a href="{{ '/categories/' | relative_url }}">分类</a>
         <a href="{{ '/archive/' | relative_url }}">归档</a>
         <a href="{{ '/about/' | relative_url }}">关于</a>
@@ -31,7 +28,6 @@
     </main>
     <footer class="site-footer">
       <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
-      <span>Powered by GitHub Pages and Jekyll</span>
     </footer>
   </body>
 </html>

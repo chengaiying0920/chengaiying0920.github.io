@@ -4,8 +4,16 @@ layout: default
 
 <article class="article">
   <header class="article-header">
-    <p class="eyebrow">{{ page.date | date: "%Y-%m-%d" }}</p>
     <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.categories.size > 0 %}
+        <span>分类于 {{ page.categories | join: ", " }}</span>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+        <span>标签 {{ page.tags | join: ", " }}</span>
+      {% endif %}
+    </div>
     {% if page.tags.size > 0 %}
       <div class="tags">
         {% for tag in page.tags %}
