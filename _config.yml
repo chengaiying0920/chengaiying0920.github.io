@@ -1,5 +1,5 @@
 title: Cheng Aiying
-description: Personal notes on code, products, and life.
+description: Personal writing on code, products, and life.
 url: "https://chengaiying0920.github.io"
 baseurl: ""
 lang: zh-CN
@@ -37,18 +37,8 @@ defaults:
       author: Cheng Aiying
   - scope:
       path: ""
-      type: "notes"
     values:
       layout: page
-  - scope:
-      path: ""
-    values:
-      layout: page
-
-collections:
-  notes:
-    output: true
-    permalink: /notes/:path/
 
 exclude:
   - Gemfile

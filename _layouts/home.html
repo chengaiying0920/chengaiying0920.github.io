@@ -3,41 +3,24 @@ layout: default
 ---
 
 <section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">Personal Blog</p>
-    <h1>Cheng Aiying</h1>
-    <p>用 Markdown 记录技术、产品、阅读和生活。文章和笔记会被 GitHub Pages 自动渲染成可阅读的网页。</p>
-    <div class="hero-actions">
-      <a class="button primary" href="#posts">阅读文章</a>
-      <a class="button" href="{{ '/notes/' | relative_url }}">查看笔记</a>
-    </div>
-  </div>
-  <div class="hero-panel" aria-label="Markdown preview">
-    <div class="code-window">
-      <span></span><span></span><span></span>
-    </div>
-    <pre><code>---
-title: "新文章"
-date: 2026-07-05
----
-
-正文直接写 Markdown，
-GitHub Pages 自动生成网页。</code></pre>
-  </div>
+  <p class="eyebrow">Personal Blog</p>
+  <h1>Cheng Aiying</h1>
+  <p>记录技术实践、产品思考和生活观察。</p>
 </section>
 
 <section id="posts" class="section">
   <div class="section-heading">
-    <p class="eyebrow">Latest Posts</p>
-    <h2>最新文章</h2>
+    <h2>文章</h2>
   </div>
   <div class="post-list">
     {% for post in site.posts %}
-      <article class="post-card">
+      <article class="post-item">
         <a href="{{ post.url | relative_url }}">
+          <div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          </div>
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
           {% if post.tags.size > 0 %}
             <div class="tags">
               {% for tag in post.tags limit: 4 %}
@@ -47,19 +30,8 @@ GitHub Pages 自动生成网页。</code></pre>
           {% endif %}
         </a>
       </article>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="section grid-two">
-  <div>
-    <p class="eyebrow">Notes</p>
-    <h2>公开笔记</h2>
-    <p>每个笔记都是一个 Markdown 文件，提交后会直接成为博客网站上的页面。</p>
-  </div>
-  <div class="link-list">
-    {% for note in site.notes %}
-      <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+    {% else %}
+      <p class="empty">还没有文章。</p>
     {% endfor %}
   </div>
 </section>
