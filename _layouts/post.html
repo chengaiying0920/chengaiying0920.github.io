@@ -17,4 +17,7 @@ layout: default
   <div class="prose">
     {{ content }}
   </div>
+  {% unless page.comments == false %}
+    {% include giscus.html %}
+  {% endunless %}
 </article>
