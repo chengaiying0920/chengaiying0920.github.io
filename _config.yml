@@ -15,11 +15,11 @@ plugins:
   - jekyll-sitemap
 
 giscus:
-  enabled: false
+  enabled: true
   repo: chengaiying0920/chengaiying0920.github.io
   repo_id: R_kgDOPSm0qA
-  category: General
-  category_id: ""
+  category: Announcements
+  category_id: DIC_kwDOPSm0qM4DAhmP
   mapping: pathname
   strict: "0"
   reactions_enabled: "1"
