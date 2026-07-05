@@ -11,4 +11,4 @@ permalink: /about/
 
 - 博客文章放在 `_posts/`，文件名格式为 `YYYY-MM-DD-title.md`。
 - 笔记页面放在 `_notes/`，会发布到 `/notes/文件名/`。
-- 需要在站内预览任意 Markdown 文件时，可以访问 `/reader/?file=docs/sample.md`。
+- Markdown 文件顶部保留 Front Matter，提交后会直接渲染成博客网页。

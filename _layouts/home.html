@@ -6,10 +6,10 @@ layout: default
   <div class="hero-copy">
     <p class="eyebrow">Personal Blog</p>
     <h1>Cheng Aiying</h1>
-    <p>用 Markdown 记录技术、产品、阅读和生活。发布交给 GitHub Pages，内容保持简单、长期可维护。</p>
+    <p>用 Markdown 记录技术、产品、阅读和生活。文章和笔记会被 GitHub Pages 自动渲染成可阅读的网页。</p>
     <div class="hero-actions">
       <a class="button primary" href="#posts">阅读文章</a>
-      <a class="button" href="{{ '/reader/?file=docs/sample.md' | relative_url }}">打开 .md</a>
+      <a class="button" href="{{ '/notes/' | relative_url }}">查看笔记</a>
     </div>
   </div>
   <div class="hero-panel" aria-label="Markdown preview">
@@ -21,8 +21,8 @@ title: "新文章"
 date: 2026-07-05
 ---
 
-用 Markdown 写作，
-用 GitHub Pages 发布。</code></pre>
+正文直接写 Markdown，
+GitHub Pages 自动生成网页。</code></pre>
   </div>
 </section>
 
@@ -55,7 +55,7 @@ date: 2026-07-05
   <div>
     <p class="eyebrow">Notes</p>
     <h2>公开笔记</h2>
-    <p>适合放长期更新的知识库、读书记录和项目文档。</p>
+    <p>每个笔记都是一个 Markdown 文件，提交后会直接成为博客网站上的页面。</p>
   </div>
   <div class="link-list">
     {% for note in site.notes %}

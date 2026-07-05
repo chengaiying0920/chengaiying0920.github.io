@@ -23,6 +23,11 @@ defaults:
       author: Cheng Aiying
   - scope:
       path: ""
+      type: "notes"
+    values:
+      layout: page
+  - scope:
+      path: ""
     values:
       layout: page
 

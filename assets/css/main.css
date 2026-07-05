@@ -140,8 +140,7 @@ a {
   margin-top: 28px;
 }
 
-.button,
-.reader-toolbar button {
+.button {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -155,8 +154,7 @@ a {
   padding: 10px 16px;
 }
 
-.button.primary,
-.reader-toolbar button {
+.button.primary {
   border-color: var(--accent);
   background: var(--accent);
   color: #fff;
@@ -359,22 +357,6 @@ pre {
   padding: 0;
 }
 
-.reader-toolbar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.reader-toolbar input {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font: inherit;
-  min-height: 44px;
-  padding: 10px 12px;
-  width: 100%;
-}
-
 .site-footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -406,7 +388,4 @@ pre {
     margin-top: 28px;
   }
 
-  .reader-toolbar {
-    grid-template-columns: 1fr;
-  }
 }
