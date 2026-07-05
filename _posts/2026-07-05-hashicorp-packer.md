@@ -2,7 +2,7 @@
 title: "HashiCorp Packer: 多平台镜像构建工具"
 date: 2026-07-05 12:00:00 +0800
 categories: [blog]
-tags: [GitHub Pages, Jekyll, Markdown]
+tags: [tools, packer]
 excerpt: "HashiCorp Packer: 多平台镜像构建工具"
 ---
 
