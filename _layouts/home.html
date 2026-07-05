@@ -2,15 +2,13 @@
 layout: default
 ---
 
-<section class="hero">
-  <p class="eyebrow">Personal Blog</p>
-  <h1>Cheng Aiying</h1>
-  <p>记录技术实践、产品思考和生活观察。</p>
-</section>
-
-<section id="posts" class="section">
-  <div class="section-heading">
-    <h2>文章</h2>
+<section id="posts" class="section home-posts">
+  <div class="section-heading home-heading">
+    <h1>历史文章</h1>
+    <div class="home-actions" aria-label="文章筛选入口">
+      <a href="{{ '/categories/' | relative_url }}">分类</a>
+      <a href="{{ '/archive/' | relative_url }}">归档</a>
+    </div>
   </div>
   <div class="post-list">
     {% for post in site.posts %}
