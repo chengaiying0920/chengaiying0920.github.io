@@ -145,11 +145,15 @@ a {
   margin-top: 12px;
 }
 
-.post-meta span {
+.view-stat {
+  white-space: nowrap;
+}
+
+.post-meta > span {
   position: relative;
 }
 
-.post-meta span::before {
+.post-meta > span::before {
   color: #d0d0d0;
   content: "/";
   margin-right: 12px;

@@ -7,6 +7,7 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% include post-stats.html post=page %}
       {% if page.categories.size > 0 %}
         <span>分类于 {{ page.categories | join: ", " }}</span>
       {% endif %}
@@ -23,6 +24,7 @@ layout: default
     {% endif %}
   </header>
   <div class="prose">
+    <span class="current-post-marker" data-current-post="{{ page.url | relative_url }}" hidden></span>
     {{ content }}
   </div>
   {% unless page.comments == false %}

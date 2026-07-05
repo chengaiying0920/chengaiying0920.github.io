@@ -1,0 +1,13 @@
+{% assign target = include.post | default: page %}
+{% assign text = target.content | strip_html | strip_newlines | replace: " ", "" | replace: "　", "" %}
+{% assign word_count = text | size %}
+{% assign read_minutes = word_count | plus: 399 | divided_by: 400 %}
+{% if read_minutes < 1 %}
+  {% assign read_minutes = 1 %}
+{% endif %}
+
+<span>{{ word_count }} 字</span>
+<span>约 {{ read_minutes }} 分钟</span>
+<span class="view-stat" data-view-path="{{ target.url | relative_url }}">
+  阅读 <span class="view-count">0</span> 次
+</span>

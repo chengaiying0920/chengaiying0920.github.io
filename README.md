@@ -16,6 +16,7 @@ bundle exec jekyll serve
 - 新博客文章放在 `_posts/`，文件名格式为 `YYYY-MM-DD-title.md`。
 - 普通 Markdown 页面也可以直接放在仓库中，只要文件顶部包含 Front Matter，就会被 GitHub Pages 渲染成网页。
 - `/categories/` 会按文章 tags 分组，`/archive/` 会按年份归档文章。
+- 首页和文章页会显示字数、预计阅读时长和浏览器本地记录的阅读次数。
 
 推送到 `main` 分支后，GitHub Actions 会构建并发布到 GitHub Pages。
 
