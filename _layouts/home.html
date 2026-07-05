@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Personal Blog</p>
+    <h1>Cheng Aiying</h1>
+    <p>用 Markdown 记录技术、产品、阅读和生活。发布交给 GitHub Pages，内容保持简单、长期可维护。</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#posts">阅读文章</a>
+      <a class="button" href="{{ '/reader/?file=docs/sample.md' | relative_url }}">打开 .md</a>
+    </div>
+  </div>
+  <div class="hero-panel" aria-label="Markdown preview">
+    <div class="code-window">
+      <span></span><span></span><span></span>
+    </div>
+    <pre><code>---
+title: "新文章"
+date: 2026-07-05
+---
+
+用 Markdown 写作，
+用 GitHub Pages 发布。</code></pre>
+  </div>
+</section>
+
+<section id="posts" class="section">
+  <div class="section-heading">
+    <p class="eyebrow">Latest Posts</p>
+    <h2>最新文章</h2>
+  </div>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {% if post.tags.size > 0 %}
+            <div class="tags">
+              {% for tag in post.tags limit: 4 %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section grid-two">
+  <div>
+    <p class="eyebrow">Notes</p>
+    <h2>公开笔记</h2>
+    <p>适合放长期更新的知识库、读书记录和项目文档。</p>
+  </div>
+  <div class="link-list">
+    {% for note in site.notes %}
+      <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+    {% seo title=false %}
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} 首页">
+        <span class="brand-mark">CA</span>
+        <span>
+          <strong>{{ site.title }}</strong>
+          <small>{{ site.description }}</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="{{ '/' | relative_url }}">文章</a>
+        <a href="{{ '/notes/markdown-guide/' | relative_url }}">笔记</a>
+        <a href="{{ '/reader/?file=docs/sample.md' | relative_url }}">Markdown</a>
+        <a href="{{ '/about/' | relative_url }}">关于</a>
+      </nav>
+    </header>
+    <main class="site-main">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
+      <span>Powered by GitHub Pages and Jekyll</span>
+    </footer>
+  </body>
+</html>

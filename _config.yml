@@ -1,0 +1,38 @@
+title: Cheng Aiying
+description: Personal notes on code, products, and life.
+url: "https://chengaiying0920.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Cheng Aiying
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
